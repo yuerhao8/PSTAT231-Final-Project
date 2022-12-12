@@ -57,7 +57,7 @@ There are 284807 observations and 31 columns in this dataset. There are 1 respon
 
 - `Amount`: (Data Type: continuous) Transaction Amount  
 
-- `Class`: (Data Type: nominal) The response variable and it takes value 1 in case of fraud and 0 otherwise  
+- `Class`: (Data Type: nominal) The response variable has a value of 1 when there is fraud and 0 when there isn't.  
 *Note: a full copy of the codebook is available in zipped final projecct files.*
 
 ### 2.1 Loading Data and Packages
@@ -144,6 +144,9 @@ dim(creditc)
 ```{r, class.source = 'fold-show'}
 creditc$amount <- scale(creditc$amount)
 head(creditc)
+#save processed dataframe
+#write.csv(creditc, "/Users/Yuer_Hao/Desktop/PSTAT231-Final-Project/data/processed/creditc.csv", row.names=FALSE)
+
 ```
 We completed the the process of data cleaning.
 
